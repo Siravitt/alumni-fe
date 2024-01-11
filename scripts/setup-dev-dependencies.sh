@@ -13,4 +13,4 @@ nvm use v20.10.0
 
 cd ../user-fe
 pnpm install
-popd
+cd ..
