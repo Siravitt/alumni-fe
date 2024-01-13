@@ -50,3 +50,13 @@ EOF
 		fi
 
 fi
+
+# check: Is python is installed ?
+if command -v python3 &> /dev/null
+then
+	version=$(python3 --version)
+	printf '%s (%s)\n' "🌴 \`python3\` is already installed" "$version"
+else
+	brew install python
+	printf '%s (%s)\n' "🌴 \`python3\` command is ready" "$version"
+fi
