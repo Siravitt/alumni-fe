@@ -51,6 +51,17 @@ EOF
 
 fi
 
+# check: Is pnpm is installed ?
+if command -v pnpm &> /dev/null
+then
+	version=$(pnpm --version)
+	printf '%s (%s)\n' "🌴 \`python3\` is already installed" "$version"
+else
+	npm i -g pnpm
+	version=$(pnpm --version)
+	printf '%s (%s)\n' "🌴 \`pnpm\` command is ready" "$version"
+fi
+
 # check: Is python is installed ?
 if command -v python3 &> /dev/null
 then
@@ -58,5 +69,6 @@ then
 	printf '%s (%s)\n' "🌴 \`python3\` is already installed" "$version"
 else
 	brew install python
+	version=$(python3 --version)
 	printf '%s (%s)\n' "🌴 \`python3\` command is ready" "$version"
 fi
