@@ -1,3 +1,6 @@
 #!/bin/bash
 
-pwd
+
+cd ./user-fe
+pnpm run format:fix
+cd ..
