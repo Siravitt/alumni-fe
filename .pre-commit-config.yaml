@@ -1,8 +1,16 @@
 default_stages: [commit]
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: detect-private-key
-    -   id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: detect-private-key
+      - id: end-of-file-fixer
+  - repo: local
+    hooks:
+      - id: prettier
+        name: run prettier
+        entry: ./scripts/prettier-pre-commit.sh
+        language: script
+        pass_filenames: true
+        verbose: true
