@@ -31,7 +31,7 @@ Install my-project with makefile
 ## Running Project
 
 ```bash
-   pnpm run dev
+  pnpm run dev
 ```
 ## Tech Stack
 
