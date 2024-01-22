@@ -4,6 +4,7 @@ import Link from "next/link"
 import LoginButton from "./LoginButton"
 import NavBarMenu from "./NavBarMenu"
 import MenuIcon from "@mui/icons-material/Menu"
+import MobileSideBar from "./MobileSideBar"
 
 function NavBar() {
   return (
@@ -21,7 +22,8 @@ function NavBar() {
             <LoginButton />
           </div>
           <div className="sm:block md:block lg:hidden xl:hidden 2xl:hidden">
-            <MenuIcon fontSize="large" />
+            {/* <MenuIcon fontSize="large" /> */}
+            <MobileSideBar />
           </div>
         </div>
       </div>
