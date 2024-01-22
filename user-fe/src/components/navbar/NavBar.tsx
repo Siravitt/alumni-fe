@@ -5,6 +5,7 @@ import LoginButton from "./LoginButton"
 import NavBarMenu from "./NavBarMenu"
 import MenuIcon from "@mui/icons-material/Menu"
 import MobileSideBar from "./MobileSideBar"
+import ThemeButton from "./ThemeButton"
 
 function NavBar() {
   return (
@@ -18,8 +19,9 @@ function NavBar() {
           <NavBarMenu title="Contact Us" />
         </div>
         <div className="flex gap-[1rem]">
-          <div className="hidden sm:hidden md:block lg:block xl:block 2xl:block">
+          <div className="hidden gap-3 sm:hidden md:flex lg:flex xl:flex 2xl:flex">
             <LoginButton />
+            <ThemeButton />
           </div>
           <div className="sm:block md:block lg:hidden xl:hidden 2xl:hidden">
             {/* <MenuIcon fontSize="large" /> */}
