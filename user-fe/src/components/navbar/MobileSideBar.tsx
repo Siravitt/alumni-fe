@@ -9,7 +9,6 @@ import {
 import MenuIcon from "@mui/icons-material/Menu"
 
 import React from "react"
-import NavBarMenu from "./NavBarMenu"
 import MobileNavMenu from "./MobileNavMenu"
 
 function MobileSideBar() {

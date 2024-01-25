@@ -1,9 +1,8 @@
 import React from "react"
-import Logo from "./Logo"
-import Link from "next/link"
-import LoginButton from "./LoginButton"
-import NavBarMenu from "./NavBarMenu"
 import MenuIcon from "@mui/icons-material/Menu"
+import NavBarMenu from "./NavBarMenu"
+import Logo from "./Logo"
+import LoginDialog from "./LoginDialog"
 import MobileSideBar from "./MobileSideBar"
 
 function NavBar() {
@@ -19,7 +18,7 @@ function NavBar() {
         </div>
         <div className="flex gap-[1rem]">
           <div className="hidden sm:hidden md:block lg:block xl:block 2xl:block">
-            <LoginButton />
+            <LoginDialog />
           </div>
           <div className="sm:block md:block lg:hidden xl:hidden 2xl:hidden">
             {/* <MenuIcon fontSize="large" /> */}

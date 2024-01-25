@@ -11,25 +11,26 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 import Link from "next/link"
 
-export default function LoginButton() {
-  const [emailPhone, setEmailPhone] = useState<string>()
-  const [password, setPassword] = useState<string>()
+type Input = {
+  emailPhone: string
+  password: string
+}
 
-  const onChangeEmailPhone = (value: string) => {
-    if (value !== null) {
-      setEmailPhone(value)
-    }
+export default function LoginDialog() {
+  const [input, setInput] = useState<Input>({
+    emailPhone: "",
+    password: "",
+  })
+
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInput({ ...input, [e.target.name]: e.target.value })
   }
-  const onChangePassword = (value: string) => {
-    if (value !== null) {
-      setPassword(value)
-    }
-  }
+
   const onSubmit = () => {
-    console.log(emailPhone, "email", password, "password")
+    console.log(input)
   }
 
   return (
@@ -49,9 +50,10 @@ export default function LoginButton() {
               </Label>
               <Input
                 id="email-phone"
+                name="emailPhone"
                 className="col-span-3"
                 onChange={event => {
-                  onChangeEmailPhone(event.target.value)
+                  onChange(event)
                 }}
               />
             </div>
@@ -62,14 +64,15 @@ export default function LoginButton() {
               <Input
                 type="password"
                 id="password"
+                name="password"
                 className="col-span-3"
                 onChange={event => {
-                  onChangePassword(event.target.value)
+                  onChange(event)
                 }}
               />
             </div>
             <Button
-              disabled={!emailPhone || !password}
+              // disabled={!emailPhone || !password}
               className="grid-col-4"
               type="submit"
               onClick={onSubmit}
@@ -90,15 +93,6 @@ export default function LoginButton() {
               <Link className="text-sm" href="">
                 Forget password
               </Link>
-            </div>
-            <div className="grid-col-12">
-              <label htmlFor="" className="text-sm text-gray-400">
-                This page is protected by Google reCAPTCHA <br />
-                to ensure you are not a bot.{" "}
-                <Link className="text-black" href="">
-                  Learn more.
-                </Link>
-              </label>
             </div>
           </div>
           <DialogFooter></DialogFooter>

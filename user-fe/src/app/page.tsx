@@ -1,5 +1,5 @@
-import MobileSideBar from "@/components/navbar/MobileSideBar"
-import NavBar from "@/components/navbar/NavBar"
+import MobileSideBar from "@/components/NavBar/MobileSideBar"
+import NavBar from "@/components/NavBar/NavBar"
 
 export default function Home() {
   return (
