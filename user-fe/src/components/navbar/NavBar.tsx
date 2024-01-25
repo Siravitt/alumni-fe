@@ -2,7 +2,7 @@ import React from "react"
 import MenuIcon from "@mui/icons-material/Menu"
 import NavBarMenu from "./NavBarMenu"
 import Logo from "./Logo"
-import LoginDialog from "./LoginDialog"
+import LoginDialog from "../LoginDialog/LoginDialog"
 import MobileSideBar from "./MobileSideBar"
 
 function NavBar() {
