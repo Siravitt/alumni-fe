@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -37,7 +38,7 @@ export default function LoginDialog() {
     <form>
       <Dialog>
         <DialogTrigger asChild>
-          <Button>Login</Button>
+          <Button>Sign in</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -71,12 +72,7 @@ export default function LoginDialog() {
                 }}
               />
             </div>
-            <Button
-              // disabled={!emailPhone || !password}
-              className="grid-col-4"
-              type="submit"
-              onClick={onSubmit}
-            >
+            <Button className="grid-col-4" type="submit" onClick={onSubmit}>
               Sign in
             </Button>
             <div className="grid-col-12 flex items-center justify-between">
@@ -88,7 +84,7 @@ export default function LoginDialog() {
                 Need help?
               </Link>
             </div>
-            <div className=" grid-col-12 mt-3 flex items-center gap-2">
+            <div className="grid-col-12 mt-3 flex items-center gap-2">
               <Label className="text-gray-400">Forget password?</Label>
               <Link className="text-sm" href="">
                 Forget password
