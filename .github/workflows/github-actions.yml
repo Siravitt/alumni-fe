@@ -20,7 +20,7 @@ jobs:
         node --version
         cd ./user-fe
         npm install
-        npm run test
+        npm run test:ci
 
   push-on-success:
     runs-on: ubuntu-latest
