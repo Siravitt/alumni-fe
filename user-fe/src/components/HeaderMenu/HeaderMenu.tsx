@@ -11,10 +11,10 @@ function HeaderMenu() {
   return (
     <>
       <div className="hidden items-center gap-8 md:flex">
-        <Link href="/">Menu 1</Link>
-        <Link href="/">Menu 2</Link>
-        <Link href="/">Menu 3</Link>
-        <Link href="/">Menu 4</Link>
+        <Link href="/">Menu 1..</Link>
+        <Link href="/">Menu 2..</Link>
+        <Link href="/">Menu 3..</Link>
+        <Link href="/">Menu 4..</Link>
         <LoginDialog />
         <Switch onClick={() => setTheme(theme === "dark" ? "light" : "dark")} />
       </div>
