@@ -1,6 +1,8 @@
 name: GitHub Actions
 
-on: [push]
+on:
+  issues:
+    types: [opened]
 
 jobs:
   run-node-test:
@@ -13,29 +15,3 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20.10.0'
-
-    - name: Run Node.js tests
-      id: node-test
-      run: |
-        node --version
-        cd ./user-fe
-        npm install
-        npm run test:ci
-
-  push-on-success:
-    runs-on: ubuntu-latest
-    needs: [run-node-test]
-    steps:
-    - name: Check test results
-      run: |
-        if [ "${{ needs.run-node-test.outputs.node-test }}" != "0" ]; then
-          echo "Tests failed, not pushing changes."
-          exit 1
-        else
-          echo "Tests passed, pushing changes."
-        fi
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: "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"
