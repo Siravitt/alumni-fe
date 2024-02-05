@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { Switch } from "../ui/switch"
 import LoginDialog from "../LoginDialog/LoginDialog"
+import React from "react"
 
 function HeaderMenu() {
   const { theme, setTheme } = useTheme()
@@ -16,7 +17,7 @@ function HeaderMenu() {
         <Link href="/">Menu</Link>
         <Link href="/">Menu</Link>
         <LoginDialog />
-        <Switch onClick={() => setTheme(theme === "dark" ? "light" : "dark")} />
+        {/* <Switch onClick={() => setTheme(theme === "dark" ? "light" : "dark")} /> */}
       </div>
       <div className="md:hidden">
         {/* TODO: conditional rendering menu image without warning */}
