@@ -13,4 +13,3 @@ repos:
         entry: ./scripts/prettier-pre-commit.sh
         language: script
         pass_filenames: true
-        verbose: true
