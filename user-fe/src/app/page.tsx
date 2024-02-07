@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header"
+import Hero from "@/components/Hero/Hero"
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <div className="grid h-screen grid-cols-12 grid-rows-12">
         <Header />
         {/* TODO: add hero-image */}
+        <Hero />
       </div>
       <div className="h-screen w-screen">
         <div className="grid h-screen grid-cols-12 grid-rows-12">
