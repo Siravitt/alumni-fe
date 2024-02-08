@@ -1,34 +1,34 @@
+import Container from "@/components/Container/Container"
 import Header from "@/components/Header/Header"
-import Hero from "@/components/Hero/Hero"
+import HeroLeft from "@/components/Hero/HeroLeft"
+import ImageContainer from "@/components/ImageContainer/ImageContainer"
 
 export default function Home() {
   return (
     <div className="bg-dark-500 text-dark-200">
-      <div className="grid h-screen grid-cols-12 grid-rows-12">
+      <Container>
         <Header />
-        {/* TODO: add hero-image */}
-        <Hero />
-      </div>
-      <div className="h-screen w-screen">
-        <div className="grid h-screen grid-cols-12 grid-rows-12">
-          <div className="col-span-10 col-start-2 row-span-4 row-start-3 md:col-span-4 md:col-start-4 md:row-span-6 md:row-start-4">
-            <div className="text-2xl">FOR IMAGE</div>
-          </div>
-          <div className="col-span-10 col-start-2 row-span-4 row-start-7 md:col-span-4 md:col-start-8 md:row-span-6 md:row-start-4">
-            <div className="text-2xl">FOR TEXT</div>
-          </div>
+        <HeroLeft />
+        <div className="col-span-10 col-start-2 row-span-4 row-start-8 md:col-span-4 md:col-start-8 md:row-span-6 md:row-start-4 lg:col-span-3 lg:col-start-8">
+          <ImageContainer src="/test-image.jpg" alt="test-image" />
         </div>
-      </div>
-      <div className="h-screen w-screen">
-        <div className="grid h-screen grid-cols-12 grid-rows-12">
-          <div className="col-span-10 col-start-2 row-span-4 row-start-3 md:col-span-4 md:col-start-4 md:row-span-6 md:row-start-4">
-            <div className="text-2xl">FOR TEXT</div>
-          </div>
-          <div className="col-span-10 col-start-2 row-span-4 row-start-7 md:col-span-4 md:col-start-8 md:row-span-6 md:row-start-4">
-            <div className="text-2xl">FOR IMAGE</div>
-          </div>
+      </Container>
+      <Container>
+        <div className="col-span-10 col-start-2 row-span-4 row-start-3 md:col-span-4 md:col-start-3 md:row-span-6 md:row-start-4 lg:col-span-3 lg:col-start-3">
+          <ImageContainer src="/test-image.jpg" alt="test-image" />
         </div>
-      </div>
+        <div className="col-span-10 col-start-2 row-span-4 row-start-8 bg-dark-400 md:col-span-4 md:col-start-8 md:row-span-6 md:row-start-4 lg:col-span-3 lg:col-start-8">
+          <div className="text-2xl">FOR TEXT</div>
+        </div>
+      </Container>
+      <Container>
+        <div className="col-span-10 col-start-2 row-span-4 row-start-3 bg-dark-400 md:col-span-4 md:col-start-3 md:row-span-6 md:row-start-4 lg:col-span-3 lg:col-start-3">
+          <div className="text-2xl">FOR TEXT</div>
+        </div>
+        <div className="col-span-10 col-start-2 row-span-4 row-start-8 md:col-span-4 md:col-start-8 md:row-span-6 md:row-start-4 lg:col-span-3 lg:col-start-8">
+          <ImageContainer src="/test-image.jpg" alt="test-image" />
+        </div>
+      </Container>
     </div>
   )
 }
